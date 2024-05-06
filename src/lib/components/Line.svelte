@@ -126,7 +126,7 @@
 </script>
 
 <div class=" w-full py-6">
-	<Card class=" bg-[#262d47] border-none shadow-none min-w-full  ">
+	<Card class=" bg-[#262d47] p-6 border-none shadow-none min-w-full  ">
 		<div class="w-full max-w-sm ">
 			<div class="mb-4 flex justify-between  border-gray-200 pb-4 ">
 				<div class="flex items-center">

@@ -24,7 +24,7 @@
 	} from 'flowbite-svelte';
 
 	import UserChart from '$lib/components/UserChart.svelte';
-	import image from '$lib/pexels-google-deepmind-17483811.jpg';
+	import image from '$lib/joshua-oluwagbemiga--W9baa2VIBU-unsplash.jpg';
 
 	/*payments.forEach((info) => {
 		const { meter, amount, address } = info;
@@ -91,7 +91,7 @@
 
 <div class=" p-10">
 	<Label>
-		<Input bind:value={searchTerm} placeholder=" Search Info.." class=" mb-5 w-[20em]"></Input>
+		<Input bind:value={searchTerm} placeholder=" Search Meter No.." class=" mb-5 p-4 w-[20em]"></Input>
 	</Label>
 
 	<Table color="custom" customeColor="#262d47"  class=" bg-[#262d47] py-8">
@@ -103,9 +103,9 @@
 			<TableHeadCell>No. Payments</TableHeadCell>
 			<TableHeadCell>Status</TableHeadCell>
 		</TableHead>
-		<TableBody tableBodyClass="divide-y bg-[#262d47]">
+		<TableBody tableBodyClass="divide-y  bg-[#262d47]">
 			{#each filteredItems as item, i}
-				<TableBodyRow on:click={() => toggleRow(i)}>
+				<TableBodyRow class=" text-center" on:click={() => toggleRow(i)}>
 					<TableBodyCell>{item.meter}</TableBodyCell>
 					<TableBodyCell>{item.name}</TableBodyCell>
 					<TableBodyCell>{Math.floor(calcAverage(item.graph))}</TableBodyCell>
@@ -114,17 +114,17 @@
 					<TableBodyCell>
 						{#if item.status == 'suspect'}
 							<button
-								class=" flex items-center space-x-2 rounded-full border-2 border-red-500 px-4 py-2 text-red-500"
+								class=" flex items-center space-x-2 rounded-full border-2 border-red-500 w-[60%] mx-auto  px-4 py-2 text-red-500"
 							>
 								<AlertCircle />
 								<h4>Suspect</h4>
 							</button>
 						{:else}
 							<button
-								class=" flex items-center space-x-2 rounded-full border-2 border-green-500 px-4 py-2 text-green-500"
+								class=" flex items-center space-x-2 w-[65%] mx-auto rounded-full border-2 border-green-500 px-4 py-2 text-green-500"
 							>
 								<CheckCheckIcon />
-								<h4>Non Suspect</h4>
+								<h4>Compliant</h4>
 							</button>
 						{/if}
 					</TableBodyCell>
@@ -161,7 +161,7 @@
 												{item.address}
 											</h5>
 											<p class="mb-3 w-[50%] font-normal text-gray-700 dark:text-gray-400">
-												Lorem ipsum dolor sit amet
+												{item.address} Enugu State Nigeria
 											</p>
 										</Card>
 									</div>

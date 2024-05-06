@@ -106,7 +106,7 @@
 						name: {
 							show: true,
 							fontFamily: 'Inter, sans-serif',
-							offsetY: 20
+							offsetY: 50
 						},
 						total: {
 							showAlways: true,
@@ -133,12 +133,12 @@
 		},
 		grid: {
 			padding: {
-				top: -2
+				top: 2
 			}
 		},
 		labels: ['Non Suspects', 'Suspests'],
 		dataLabels: {
-			enabled: false
+			enabled: true
 		},
 		legend: {
 			position: 'bottom',
@@ -158,16 +158,16 @@
 				}
 			},
 			axisTicks: {
-				show: false
+				show: true
 			},
 			axisBorder: {
-				show: false
+				show: true
 			}
 		}
 	};
 </script>
 
-<Card class=" min-w-full  border-none bg-[#262d47] shadow-none ">
+<Card class=" p-6 min-w-full  border-none bg-[#262d47] shadow-none ">
 	<div class="flex w-full items-start justify-between text-gray-500">
 		<div class="flex-col items-center">
 			<div class="mb-1 flex items-center">

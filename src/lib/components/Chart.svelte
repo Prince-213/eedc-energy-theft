@@ -126,8 +126,8 @@
 	};
 </script>
 
-<div class=" w-full">
-	<Card class=" min-w-full border-none shadow-none bg-[#262d47]" size="lg">
+<div class=" w-full ">
+	<Card class=" border-none shadow-none p-5 bg-[#262d47]" size="lg">
 		
 		<div class="flex justify-between">
 			<div>
@@ -140,7 +140,7 @@
 				<ChevronRightSolid class="ms-1 h-3 w-3" />
 			</div>
 		</div>
-		<Chart {options} />
+		<Chart {options}  />
 		<div
 			class="mt-5 grid grid-cols-1 items-center justify-between border-t border-gray-200 dark:border-gray-700"
 		>

@@ -7,7 +7,8 @@
 		ReceiptIcon,
 		SettingsIcon,
 		LogOutIcon,
-		SendIcon
+		SendIcon,
+		PlusCircle
 	} from 'lucide-svelte';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
@@ -33,9 +34,9 @@
 		},
 
 		{
-			title: 'Message',
-			icon: SendIcon,
-			path: '/sales'
+			title: 'Analyze',
+			icon: PlusCircle,
+			path: '/add'
 		}
 	];
 </script>

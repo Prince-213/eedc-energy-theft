@@ -44,7 +44,7 @@
 		graph: number[];
 	}[];
 
-	let payments: Payments = $page.data.info;
+	let payments: Payments = $page.data.info; 
 
 	let suspects = payments.filter((item) => item.status == 'suspect');
 

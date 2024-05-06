@@ -1,34 +1,30 @@
 import type { PageServerLoad } from './$types';
-import { faker } from '@faker-js/faker';
-import { page } from '$app/stores' 
 
-export const load = (async ({ locals, fetch }) => {
+export const load = (async ({ fetch }) => {
+	type Payments = {
+		name: string;
+		meter: string;
+		january: number;
+		febuary: number;
+		march: number;
+		april: number;
+		may: number;
+		june: number;
+		july: number;
+		august: number;
+		september: number;
+		october: number;
+		november: number;
+		december: number;
+		address: string;
+		status: string;
+		graph: number[];
+	}[];
 
+	const response = await fetch('/api/payments');
+	const data: Payments = await response.json();
 
-    type Payments = {
-        name: string
-        meter: string
-        january: number
-        febuary: number
-        march: number
-        april: number        
-        may: number
-        june : number
-        july : number
-        august : number
-        september : number
-        october: number
-        november: number
-        december: number
-        address : string
-        status : string
-        graph: number[]
-    }[];
-    
-    let response = await fetch("/api/payments");
-    let data: Payments = await response.json();
-    
-    return {
-        info: data
-    };
+	return {
+		info: data
+	};
 }) satisfies PageServerLoad;
