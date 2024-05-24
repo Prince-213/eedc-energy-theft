@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"postinstall": "prisma generate",
 		"preview": "vite preview",
 		"test": "npm run test:integration && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -15,7 +16,6 @@
 		"test:unit": "vitest"
 	},
 	"devDependencies": {
-		"@faker-js/faker": "^8.3.1",
 		"@fontsource/merriweather": "^5.0.8",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^3.0.1",
